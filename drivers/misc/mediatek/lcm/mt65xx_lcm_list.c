@@ -18,6 +18,7 @@
 #define LCD_DEBUG(fmt)  printk(fmt)
 #endif
 
+extern LCM_DRIVER otm1287_hd720_dsi_vdo_boyi_longwei_lcm_drv;
 extern LCM_DRIVER lp079x01_lcm_drv;
 extern LCM_DRIVER hx8369_lcm_drv;
 extern LCM_DRIVER hx8369_6575_lcm_drv;
@@ -213,6 +214,9 @@ LCM_DRIVER* lcm_driver_list[] =
 #endif
 
 // anxiang.xiao add start
+#if defined(OTM1287_HD720_DSI_VDO_BOYI_LONGWEI)
+        &otm1287_hd720_dsi_vdo_boyi_longwei_lcm_drv,
+#endif
 #if defined(HX8379A_DSI_VDO_AZET_IPS)
 		&hx8379a_dsi_vdo_azet_ips_lcm_drv,
 #endif
