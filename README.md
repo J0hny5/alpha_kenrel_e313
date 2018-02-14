@@ -1,4 +1,4 @@
-kernel source for Micromax Canvas Express 2
+kernel source for Micromax Canvas Xpress 2
 =========================================
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -11,7 +11,7 @@ Battery | 2500 mAh
 Display | 5" 720 x 1280 px
 Camera  | 13MPx + 2Mpx, LED Flash
 
-![Micromax](https://images-na.ssl-images-amazon.com/images/I/51tSpbcB1xL.jpg "Micromax Canvas Express 2")
+![Micromax](https://images-na.ssl-images-amazon.com/images/I/51tSpbcB1xL.jpg "Micromax Canvas Xpress 2")
 
 
 cd ~/kernel_longwei_E313
