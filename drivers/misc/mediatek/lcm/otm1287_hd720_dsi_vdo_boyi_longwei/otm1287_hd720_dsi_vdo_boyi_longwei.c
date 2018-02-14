@@ -420,6 +420,10 @@ static void lcm_get_params(LCM_PARAMS *params)
 	params->dsi.mode = SYNC_PULSE_VDO_MODE;
 #endif
 
+        params->dbi.te_mode = LCM_DBI_TE_MODE_VSYNC_ONLY;
+        params->dbi.te_edge_polarity = LCM_POLARITY_RISING;
+        params->dsi.intermediat_buffer_num = 2;
+
 	params->dsi.LANE_NUM = LCM_FOUR_LANE;
 
 	params->dsi.data_format.color_order = LCM_COLOR_ORDER_RGB;
@@ -431,20 +435,20 @@ static void lcm_get_params(LCM_PARAMS *params)
 
 	params->dsi.PS = LCM_PACKED_PS_24BIT_RGB888;
 
-	params->dsi.vertical_sync_active = 2;
+	params->dsi.vertical_sync_active = 4;
 	params->dsi.vertical_backporch = 16;
-	params->dsi.vertical_frontporch = 9;
+	params->dsi.vertical_frontporch = 20;
 	params->dsi.vertical_active_line = FRAME_HEIGHT;
 
-	params->dsi.horizontal_sync_active = 20;
-	params->dsi.horizontal_backporch = 50;
-	params->dsi.horizontal_frontporch = 50;
+	params->dsi.horizontal_sync_active = 10;
+	params->dsi.horizontal_backporch = 90;
+	params->dsi.horizontal_frontporch = 90;
 	params->dsi.horizontal_active_pixel = FRAME_WIDTH;
 	/* params->dsi.ssc_disable                                                       = 1; */
 #if (LCM_DSI_CMD_MODE)
 	params->dsi.PLL_CLOCK = 200;
 #else
-	params->dsi.PLL_CLOCK = 200;
+	params->dsi.PLL_CLOCK = 230;
 #endif
 }
 
